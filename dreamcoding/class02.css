@@ -1,0 +1,31 @@
+/* block레벨과 inline 레벨의 차이점 */
+/* width, height 지정 */
+/* 원하는 위치에 원하는 크기로 배치 */
+/* position, display */
+/* inline : 물건의 크기에 맞게 (물건)*/
+/* inline-block : 한 줄에 다 넣는데 블록 단위로 넣는다 (물건을 담은 상자) */
+/* block : 한 줄에 하나 상자 */
+div {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: red;
+}
+/* position default값 static */
+/* position:relative : 원래 있어야하는 자리 기준으로 left top 만큼 상대적으로 이동*/
+/* position:absolution : (부모 태그)아이템이 담겨있는 상자안에서 상대적으로 이동 */
+/* position:fixed : 상자안에서 벗어나서 웹페이지 기준에서 움직임 */
+/* position:sticky : 원래 있어야하는 자리에 고정되어있다. */
+.container {
+  background-color: yellow;
+  left: 20px;
+  top: 20px;
+  position: relative;
+}
+
+.box {
+  background-color: blue;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+}

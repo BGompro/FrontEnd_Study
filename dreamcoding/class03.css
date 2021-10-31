@@ -1,0 +1,67 @@
+/* float : 글(text)과 이미지를 어떻게 함께 배치할 지 정할 때 사용하는 것이 목적 */
+
+/* flex box */
+/* box를 자유롭게 움직이도록 해준다. */
+
+/* container 박스에 적용하는 속성값 존재, 박스안에 있는 아이템에 적용하는 속성값이 있다 */
+/* main axis(중심축)와 cross axis(반대축)존재 수평축, 수직축*/
+/* 100%는 부모 태그 기준 vh은 보이는 화면에 대한 퍼센트*/
+.container {
+  background-color: beige;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+/* - 박스에 적용하는 속성 값 */
+/* 1.container에 display:flex 지정 */
+/* 2.메인축 flex-direction 설정 row, column, row-reverse, column-reverse*/
+/* 3.flex-wrap  기본값 nowrap, wrap 설정하면 내려간다 */
+/* flex-flow은 flex-direction, flex-wrap 특성 두개 다 지정가능 */
+/* 4. 중심축에서 아이템을 어떻게 배치할지 justify-content: center, space-around, space-evenly, space-between, flex-end, flex-start */
+/* 5. 반대축에서 아이템을 어떻게 배치할지 align-content: space-between 위의 모든 속성 값들 쓸 수 있다  */
+/* 6. 반대축에서 아이템을 어떻게 할지 align-items: baseline */
+/*  */
+.item {
+  width: 40px;
+  height: 40px;
+}
+/* - 박스 안의 아이템에 적용하는 속성 값 */
+/* order:숫자 -아이템 순서를 지정해줄 수 있다 */
+/* flex-grow:숫자 기본 값 0(윈도우 크기가 변할 때 변하지 않는다) 지정해주면 숫자에 비례하여 커진다*/
+/* flex-shrink:숫자 기본 값 0 컨테이너가 줄어들 때 아이템이 어떤 비율로 줄어들지 정해준다*/
+/* flex-basis:60% 기본값 auto 컨테이너의 크기에 설정해준 비율에 맞게 유지  */
+/* align-self:center 아이템 하나만 특별하게 배치할 수 있다. */
+
+.item1 {
+  background-color: red;
+}
+.item2 {
+  background-color: orange;
+  order:2;
+}
+.item3 {
+  background-color: yellow;
+}
+.item4 {
+  background-color: yellowgreen;
+}
+.item5 {
+  background-color: green;
+}
+.item6 {
+  background-color: skyblue;
+}
+.item7 {
+  background-color: blue;
+}
+.item8 {
+  background-color: navy;
+}
+.item9 {
+  background-color: purple;
+}
+.item10 {
+  background-color: violet;
+}
