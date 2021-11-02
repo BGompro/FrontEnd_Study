@@ -3,15 +3,16 @@
 // };
 
 // export default Hello;
-import World from "./World";
-import styles from "./Hello.module.css";
 import {useState} from "react";
 
-export default function Hello(){
+export default function Hello(props){
+    console.log(props);
+
     // let name='Mike';
     const [name,setName]=useState('Mike');
+    const [age,setAge]=useState(props.age);
     function changeName(){
-        const newName=name==='Mike'?"Jane":"Mike";
+        const newName = name==='Mike'?"Jane":"Mike";
         // document.getElementById("name").innerText=name;
         setName(newName);
     }
@@ -19,8 +20,11 @@ export default function Hello(){
     <div>
         <h1>state</h1>
         <h2>컴포넌트의 속성값</h2>
-        <h3 id="name">이름 : {name} </h3>
-        <button onClick={changeName}>Change</button>
+        <h3>이름 : {name} ({age}) </h3>
+        <button onClick={()=>{
+            changeName();
+            setAge(age+1);
+        }}>Change</button>
     </div>
     );
 }

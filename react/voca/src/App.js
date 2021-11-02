@@ -7,7 +7,9 @@ function App() {
     // className : class는 자바스크립트 예약어이기 때문에
     <div className="App">
       <Welcome/>
-      <Hello/>
+      <Hello age={10}/>
+      <Hello age={20}/>
+      <Hello age={30}/>
     </div>
   );
 }
