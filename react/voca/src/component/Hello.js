@@ -6,19 +6,23 @@
 import World from "./World";
 import styles from "./Hello.module.css";
 export default function Hello(){
+    function showName(){
+        console.log("Mike");
+    }
+
+    function showText(e){
+        console.log(e.target.value);
+    }
     return (
     <div>
-        <p style={
-        {
-            color:'#f00',
-            borderRight:'2px solid #000',
-            marginBottom: '30px',
-            opacity:0.5,
-        }
-        }
-        >Hello</p>
-        <World/>
-        <div className={styles.box}>Wow~</div>
+        <h1>Hello</h1>
+        <button onClick={showName}>Show name</button>
+        <button onClick={
+            ()=>{
+                console.log(30);
+            }
+        }>Show age</button>
+        <input type="text" onChange={showText}/>
     </div>
     );
 }
