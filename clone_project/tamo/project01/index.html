@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 속성죽이기 -->
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            border-collapse: collapse;
+        }
+        .intro_bg{
+                background-image:url('images/intro.png') ;
+                width:100%;
+                height: 718px;
+
+        }
+        header {
+            width: 1280px;
+            margin: auto;
+            display: flex;
+        }
+        .searchArea{
+            width: 300px;
+            height: 40px;
+            border-radius: 5px;
+            margin-top:24px;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .searchArea > form > input{
+            border:none;
+            width: 250px;
+            background-color: rgba(0,0,0,0.0);
+            height: 40px;
+            color:rgb(0,0,0);
+            padding-left:10px;
+        }
+        .searchArea > form > span{
+            width: 50px;
+            color:#fff;
+            cursor: pointer;
+        }
+        
+        header > nav {
+            display: flex;
+            width: calc(1280px - 300px);
+            justify-content: flex-end;
+            line-height: 86px;
+            
+        }
+        header > nav > ul{
+            display: flex;
+        }
+        header > nav > ul > li{
+            margin-left: 84px;      
+        }
+        header > nav > ul > li > a{
+            color: #fff;
+        }
+        
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="intro_bg">
+        <header>
+            <div class="searchArea">
+                <form>
+                    <input type="search" placeholder="search"><span>검색</span>
+                </form>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICE</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    </div>
+</body>
+</html>
