@@ -5,8 +5,16 @@
   text-decoration: none;
   border-collapse: collapse;
 }
+h1 {
+  font-size: 48px;
+  font-weight: 100;
+}
+.contents1 {
+  font-size: 20px;
+  font-weight: lighter;
+}
 .intro_bg {
-  background-image: url("images/intro.png");
+  background-image: url("../images/intro.png");
   width: 100%;
   height: 718px;
 }
@@ -15,14 +23,14 @@ header {
   margin: auto;
   display: flex;
 }
-.searchArea {
+.search_area {
   width: 300px;
   height: 40px;
   border-radius: 5px;
   margin-top: 24px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.searchArea > form > input {
+.search_area > form > input {
   border: none;
   width: 250px;
   background-color: rgba(0, 0, 0, 0);
@@ -30,7 +38,7 @@ header {
   color: rgb(0, 0, 0);
   padding-left: 10px;
 }
-.searchArea > form > span {
+.search_area > form > span {
   width: 50px;
   color: #fff;
   cursor: pointer;
@@ -50,4 +58,40 @@ header > nav > ul > li {
 }
 header > nav > ul > li > a {
   color: #fff;
+}
+.intro_text {
+  width: 100%;
+  text-align: center;
+  margin: 231px auto;
+}
+
+.intro_text > h1,
+.intro_text > h4 {
+  color: #fff;
+}
+
+.amount {
+  position: relative;
+  top: -65px;
+  width: 1280px;
+  background-color: #fff;
+  display: flex;
+  margin: auto;
+}
+
+.amount > li {
+  flex: 1;
+  height: 132px;
+  background-color: blue;
+}
+
+.amount > li > div {
+  text-align: center;
+  background-color: green;
+  height: 57px;
+  margin-top: 37px;
+}
+
+.amount > li:not(:last-child) > div {
+  border-right: solid 1px gray;
 }
