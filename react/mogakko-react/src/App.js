@@ -1,10 +1,10 @@
 import { Hello } from "./component/Hello";
-import {InstagramIntro} from "./component/InstagramIntro";
+import {Instagram} from "./component/Instagram";
 function App() {
   return (
   <div>
       <Hello/>
-      <InstagramIntro/>
+      <Instagram/>
   </div>);
 }
 
