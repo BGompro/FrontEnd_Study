@@ -5,6 +5,8 @@
 // null, undefined
 // 변수 const : unchangeable variable, let : changeable variable
 // python : snake_case, java&javascript : camelCase recommendation
+// typeof val -> get to know data type of val
+
 
 let myName='Hyunwoo';
 const myBirth="11/29";
@@ -56,3 +58,18 @@ const player2={
 };
 
 player2.sayHello("Lynn");
+
+
+//conditional if ~ else
+const age=prompt("How old are you?");
+
+console.log(typeof "15", typeof parseInt("15"));
+if(!isNaN(age)){
+    if(age>19){
+        console.log("This person is an Adult");
+    }else{
+        console.log("This person is an Adolescent");
+    }
+}else{
+    alert("숫자를 입력해주세요.");
+}
