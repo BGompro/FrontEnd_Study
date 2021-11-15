@@ -39,15 +39,25 @@ function handleTextClick(){
 
 text.addEventListener("click",handleTextClick);
 
+// classList 이용하여 contains(클래스이름), remove(클래스이름), add(클래스이름)
+// 복합 클래스 이름을 가지고 있을 때 사용하면 유용하다. classList
 const sexyText=document.querySelector('h3');
 
 function handleSexyTextClick(){
-    const nameOfClass="clicked";
-    if(sexyText.classList.contains(nameOfClass)){
-        sexyText.classList.remove(nameOfClass)
+    const clickedClass="clicked";
+    if(sexyText.classList.contains(clickedClass)){
+        sexyText.classList.remove(clickedClass)
     }else{
-        sexyText.classList.add(nameOfClass);
+        sexyText.classList.add(clickedClass);
     }
 }
 
 sexyText.addEventListener("click",handleSexyTextClick);
+
+const sexyText2=document.querySelector('h5');
+//contains 이용해서 확인한담에 add, remove 대신 toggle함수를 이용하여 있으면 없애고 없으면 있게 만들어 준다
+function handleSexyTextClickWithToggle(){
+    sexyText2.classList.toggle("clicked");
+}
+
+sexyText2.addEventListener("click",handleSexyTextClickWithToggle);
