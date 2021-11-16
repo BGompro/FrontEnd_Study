@@ -6,6 +6,15 @@ const loginButton=document.querySelector("#login-form button");
 //     console.dir(loginInput.value);
 // }
 loginButton.addEventListener("click",()=>{
-    console.dir(loginInput.value);
-    console.log(loginInput.value);
-})
+    const username=loginInput.value;
+
+    if(username===""){
+        alert("please write your name");
+    }else if(username.length>15){
+        alert("Your name is too long.")
+    }else{
+        console.log(username);
+    }
+    
+});
+
