@@ -6,10 +6,14 @@ const clock=document.querySelector("h2#clock");
 //setTimeout(callback,millisecond) : 실행하고 싶은 함수 정의, 시간 정의
 function getClock(){
     const date=new Date();
-    clock.innerText=`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    //숫자 한자리로 나오는 것을 두자리로 표현하기 위하여 padStart() 함수를 이용
+    const hour=date.getHours().toString().padStart(2,"0");
+    const minute=date.getMinutes().toString().padStart(2,"0");
+    const second=date.getSeconds().toString().padStart(2,"0");
+    clock.innerText=`${hour}:${minute}:${second}`;
 }
-getClock();
-setInterval(getClock,1000); //5초간격으로 sayHello함수를 실행한다.
+getClock(); //시작하자마자 시간 얻는 함수 호출 한 후에 아래의 
+setInterval(getClock,1000); //1초간격으로 getClock함수를 호출한다.
 
 
 
