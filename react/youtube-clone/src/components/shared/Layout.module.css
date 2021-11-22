@@ -11,10 +11,10 @@
 
 .layout {
   display: flex;
+  margin-top: 56px;
   flex: 1;
 }
 
 .contents {
   flex: 1;
-  border: 2px solid;
 }
