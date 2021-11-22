@@ -1,4 +1,5 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Assignment from "./Assignment";
 import Explorer from "./pages/Explorer";
 import Home from "./pages/Home";
 import Subscription from "./pages/Subscription";
@@ -12,6 +13,7 @@ export default function App(){
             <Route path="/" exact={true} element={<Home/>}/>
             <Route path="/explore" element={<Explorer/>}/>
             <Route path="/subscription" element={<Subscription/>}/>
+            <Route path="/assignment" element={<Assignment/>}/>
         </Routes>
     </BrowserRouter>);
 };

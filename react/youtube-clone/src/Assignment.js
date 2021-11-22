@@ -1,7 +1,7 @@
 import youtubeData from './data/youtubeData.json';
 import React, {useState} from 'react';
 import style from './App.css';
-function App3() {
+function Assignment() {
   // console.log('youtube data:', youtubeData);
   // console.log('youtube data[data]:', youtubeData['data']);
 
@@ -54,4 +54,4 @@ function App3() {
   );
 }
 
-export default App3;
+export default Assignment;
