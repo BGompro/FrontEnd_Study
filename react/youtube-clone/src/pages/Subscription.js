@@ -1,9 +1,13 @@
-import Layout from "../components/shared/Layout";
+// Subscription 컴포넌트
+import styles from './Subscription.module.css';
+import Layout from '../components/shared/Layout';
 
-export default function Subscription(){
-    return(
-        <Layout>
-            <div>* 구독</div>
-        </Layout>
-    );
+function Subscription() {
+  return (
+    <Layout activeMenu="subscription">
+      <div className={styles.container}>* 구독</div>
+    </Layout>
+  );
 }
+
+export default Subscription;

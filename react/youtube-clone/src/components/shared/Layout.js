@@ -1,17 +1,24 @@
 import styles from './Layout.module.css';
-import Header from './Headers'
+import Header from './Headers';
 import Menu from './Menu';
+import { useState } from 'react';
 
-function Layout({children}){
-    return(
-        <div className={styles.container}>
-            <Header/>
-            <div className={styles.layout}>
-                <Menu/>
-                <div className={styles.contents}>{children}</div>
-            </div>
-        </div>
-    )
+function Layout({ children, activeMenu }) {
+  const [open, setOpen] = useState(true);
+
+  function onChangeOpen() {
+    setOpen(!open);
+  }
+
+  return (
+    <div className={styles.container}>
+      <Header onChangeOpen={onChangeOpen} />
+      <div className={styles.layout}>
+        <Menu activeMenu={activeMenu} open={open} />
+        <div className={open ? styles.contents : styles.closed}>{children}</div>
+      </div>
+    </div>
+  );
 }
 
 export default Layout;
